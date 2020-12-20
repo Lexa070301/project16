@@ -1,0 +1,54 @@
+{
+  "musers": [
+    {
+      "name": "Ivan",
+      "surname": "Ivanov",
+      "patronymic": "Ivanovich",
+      "phone": "1111212371",
+      "email": "ivan@mail.ru",
+      "birth": "23111877",
+      "department": 2,
+      "id": 1
+    },
+    {
+      "name": "Vasya",
+      "surname": "Vasin",
+      "patronymic": "Vasilyevich",
+      "phone": "9643787751",
+      "email": "vasin1337@gmail.com",
+      "birth": "11061997",
+      "department": 0,
+      "id": 2
+    },
+    {
+      "name": "gdsg",
+      "surname": "dfhgf",
+      "patronymic": "jgdjg",
+      "phone": "9993754756",
+      "email": "jgjgjg",
+      "birth": "28011987",
+      "department": 0,
+      "id": 3
+    },
+    {
+      "name": "DSGDSGS",
+      "surname": "GDSGSDG",
+      "patronymic": "GDSGDS",
+      "phone": "4643754756",
+      "email": "dsggs@GSD.FSD",
+      "birth": "04031462",
+      "department": 0,
+      "id": 4
+    },
+    {
+      "name": "Максим",
+      "surname": "Максимов",
+      "patronymic": "Олегович",
+      "phone": "6456546546",
+      "email": "max@mail.jp",
+      "birth": "12022001",
+      "department": 3,
+      "id": 5
+    }
+  ]
+}

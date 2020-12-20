@@ -1,0 +1,52 @@
+<div class="container-fluid py-3">
+  <input type="text" class="form-control" placeholder="Поиск" [(ngModel)]="searchStr" [style.width]="'100%'"
+         (input)="onSearch()">
+  <label for="sort" class="mt-3">
+    <span>Сортировка</span>
+    <select id="sort" class="custom-select" [(ngModel)]="sort" (click)="onSelect(sort)">
+      <option selected hidden>{{sort}}</option>
+      <option [ngValue]="'id-up'">Сортировка по id по возростанию</option>
+      <option [ngValue]="'id-down'">Сортировка по id по убыванию</option>
+      <option [ngValue]="'date-up'">Сортировка по возрасту по возрастанию</option>
+      <option [ngValue]="'date-down'">Сортировка по возрасту по убыванию</option>
+    </select>
+  </label>
+</div>
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Имя</th>
+      <th scope="col">Фамилия</th>
+      <th scope="col">Отчество</th>
+      <th scope="col">Телефон</th>
+      <th scope="col">Email</th>
+      <th scope="col">Дата рождения</th>
+      <th scope="col">Отдел</th>
+      <th class="text-right" scope="col">
+        <button class="btn btn-primary" (click)="onAddProfile()">
+          Добавить пользователя
+        </button>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users | search: searchStr">
+      <td scope="row">{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.patronymic }}</td>
+      <td>+7{{ user.phone | mask: '(000)000-00-00'}}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.birth | date: 'dd.MM.yyyy'}}</td>
+      <td>{{ user.department | department }}</td>
+      <td class="text-right">
+        <button class="btn btn-primary" (click)="onLinkProfile(user.id)">
+          Редактировать
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
